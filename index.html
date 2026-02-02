@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ford UK Demo - Electric Vehicles</title>
+    <script src="https://cdn.personalization.salesforce.com/a/YOUR_TENANT_ID/sdk.js"></script>
+    
+    <style>
+        body { margin: 0; font-family: sans-serif; }
+        nav { background: #000; color: white; padding: 20px; text-align: center; }
+        .hero-placeholder { height: 500px; background: #eee; display: flex; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+    <nav>FORD LOGO | VEHICLES | ELECTRIC | SHOP</nav>
+
+    <div id="personalization-hero-zone">
+        <div class="hero-placeholder">
+            <h1>Original Ford Content (Before Personalization)</h1>
+        </div>
+    </div>
+
+    <script>
+        // Paste the Transformers from your file here
+        SalesforceInteractions.Personalization.Config.initialize({
+            additionalTransformers: [{
+                name: "SimpleHero",
+                transformerType: "Handlebars",
+                // ... (Paste the rest of the Hero Transformer code from your JS file)
+            }]
+        });
+
+        SalesforceInteractions.init({
+            tenantId: "YOUR_TENANT_ID",
+            instance: "YOUR_INSTANCE",
+            personalization: { dataspace: "default" }
+        }).then(() => {
+            SalesforceInteractions.initSitemap({
+                global: {},
+                pageTypes: [{
+                    name: "home",
+                    isMatch: () => true,
+                    interaction: { name: "Homepage" }
+                }]
+            });
+        });
+    </script>
+</body>
+</html>
