@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Auto Showroom</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; }
+        nav { background: #1a1a1a; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
+        .hero { background: #f4f4f4; height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .btn { background: #004a99; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .models { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 5%; }
+        .car-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; text-align: center; padding-bottom: 1rem; }
+        .car-card img { width: 100%; height: 200px; background: #ccc; object-fit: cover; }
+        footer { background: #1a1a1a; color: #888; text-align: center; padding: 2rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AutoDrive</div>
+        <div>
+            <a href="#" style="color:white; margin-left:20px; text-decoration:none;">Vehicles</a>
+            <a href="#" style="color:white; margin-left:20px; text-decoration:none;">Offers</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Explore the Future of Driving</h1>
+        <p>Innovation and performance in every mile.</p><br>
+        <a href="#models" class="btn">View All Models</a>
+    </div>
+
+    <section class="models" id="models">
+        <div class="car-card">
+            <img src="https://via.placeholder.com/400x250?text=Electric+SUV" alt="SUV">
+            <h3>Volt Explorer</h3>
+            <p>Starting from £32,000</p>
+        </div>
+        <div class="car-card">
+            <img src="https://via.placeholder.com/400x250?text=Sport+Sedan" alt="Sedan">
+            <h3>Apex GT</h3>
+            <p>Starting from £28,500</p>
+        </div>
+        <div class="car-card">
+            <img src="https://via.placeholder.com/400x250?text=City+Hatchback" alt="Hatchback">
+            <h3>CityPulse</h3>
+            <p>Starting from £19,900</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AutoDrive UK. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
